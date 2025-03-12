@@ -5,7 +5,19 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Clock, Users, Award, PlayCircle } from 'lucide-react';
 import { sampleCourses } from '@/lib/sample-data';
-import { useRouter } from 'next/navigation';
+export async function generateStaticParams() {
+  const courses = await fetch("https://your-api.com/courses").then((res) =>
+    res.json()
+  );
+
+  return courses.map((course: { slug: string }) => ({
+    slug: course.slug,
+  }));
+}
+
+export default function CoursePage({ params }: { params: { slug: string } }) {
+  return <div>Course Page for {params.slug}</div>;
+}
 import { toast } from 'sonner';
 import { Course } from '@/lib/types';
 
