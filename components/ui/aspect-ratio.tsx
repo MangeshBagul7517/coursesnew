@@ -1,4 +1,4 @@
-'use client';
+'generateStaticParams()';
 
 import * as AspectRatioPrimitive from '@radix-ui/react-aspect-ratio';
 

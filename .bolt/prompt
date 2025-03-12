@@ -1,6 +1,6 @@
 For all designs I ask you to make, have them be beautiful, not cookie cutter. Make webpages that are fully featured and worthy for production.
 
-When using client-side hooks (useState and useEffect) in a component that's being treated as a Server Component by Next.js, always add the "use client" directive at the top of the file.
+When using client-side hooks (useState and useEffect) in a component that's being treated as a Server Component by Next.js, always add the "generateStaticParams()" directive at the top of the file.
 
 Do not write code that will trigger this error: "Warning: Extra attributes from the server: %s%s""class,style"
 

@@ -1,4 +1,4 @@
-'use client';
+'generateStaticParams()';
 
 import * as React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';

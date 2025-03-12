@@ -1,4 +1,4 @@
-'use client';
+'generateStaticParams()';
 
 import { useToast } from '@/hooks/use-toast';
 import {

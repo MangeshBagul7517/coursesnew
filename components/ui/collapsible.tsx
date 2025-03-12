@@ -1,4 +1,4 @@
-'use client';
+'generateStaticParams()';
 
 import * as CollapsiblePrimitive from '@radix-ui/react-collapsible';
 
