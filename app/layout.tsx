@@ -2,21 +2,16 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
-import { Toaster } from '@/components/ui/toaster';
-import Navbar from '@/components/navbar';
+import { Toaster } from '@/components/ui/sonner';
+import Header from '@/components/header';
 import Footer from '@/components/footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'LearnHub - Online Learning Platform',
-  description: 'Discover and master new skills with our expert-led online courses',
-  keywords: 'online courses, e-learning, education, professional development, skills',
-  openGraph: {
-    title: 'LearnHub - Online Learning Platform',
-    description: 'Discover and master new skills with our expert-led online courses',
-    images: ['/og-image.jpg'],
-  },
+  title: 'Quantora  - Professional Online Courses',
+  description: 'Discover and master new skills with our professional online courses. High-quality content, expert instructors, and lifetime access.',
+  keywords: 'online courses, e-learning, professional development, online education, skills development',
 };
 
 export default function RootLayout({
@@ -29,13 +24,15 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex min-h-screen flex-col">
-            <Navbar />
-            <main className="flex-1">{children}</main>
+          <div className="min-h-screen flex flex-col">
+            <Header />
+            <main className="flex-grow">
+              {children}
+            </main>
             <Footer />
           </div>
           <Toaster />
